@@ -526,3 +526,26 @@ img {
 		}
 	}
 }
+
+// -----
+// ニュース
+// -----
+
+.table {
+	background: #efefef;
+}
+
+.table_content {
+	margin-top: 80px;
+	display: flex;
+}
+
+.table_image {
+	width: 454px;
+	margin-right: 40px;
+	text-align: center;
+}
+
+.table_price {
+	width: 704px;
+}
