@@ -60,7 +60,7 @@
 					<div class="media_img"><img src="img/tengu.jpg" alt=""></div>
 					<div class="media_body">
 						<div class="media_title">テング</div>
-						<div class="media_content">僕はホワイト大卒ですよ？</div><!-- /.media__content -->
+						<div class="media_content">僕はホワイト大卒ですよ？叱って楽しいスカ？</div><!-- /.media__content -->
 					</div>
 				</a>
 			</div>
@@ -116,7 +116,7 @@
 					</div>
 					<div class="info_title"><a href="">ゆけ！ブラックカンパニーを追加しました</a></div>
 				</div><!-- /.info -->
-			</div><!-- /.news__item -->
+			</div><!-- /.news_item -->
 			<div class="news_item">
 				<div class="info">
 					<div class="info_meta">
@@ -213,7 +213,37 @@
 							</dd>
 						</dt>
 					</div>
+					<div class="contact_control">
+						<dt>
+							<label class="contact_label" for="your-kind">お問い合わせ先</label>
+						</dt>
+						<dd>
+							<select id="your-kind" class="form-select">
+								<option value="">選択してください</option>
+								<option value="a">ホワイト社長</option>
+								<option value="b">ゆとり</option>
+								<option value="c">テング</option>
+								<option value="d">ブラック</option>
+							</select>
+						</dd>
+					</div>
+					<div class="contact_control">
+						<dt>
+							<label class="contact_label" for="your-message">お問い合わせ内容</label>
+						</dt>
+						<dd>
+							<textarea id="your-message" class="form-textarea" name="your-message" placeholder="お問い合わせを入力してください"></textarea>
+						</dd>
+					</div>
 				</dl>
+				<div class="contact_check">
+					<label>
+						<input class="form-checkbox" type="checkbox" name="your-checkbox" required>
+
+						<span><a href="">プライバシーポリシー</a>に合意する</span>
+					</label>
+				</div>
+				<div class="contact_submit"><input class="button-arrow-right" type="submit" value="送信する"></div>
 			</form>
 		</div>
 	</div>
@@ -224,8 +254,8 @@
 			<div class="footer_left">
 				<div class="footer_logo"><a href=""><img src="img/logo.png" alt="The Company"></a></div><!-- /.footer__logo -->
 				<div class="footer_info">
-					<p>住所：ほげほげのほげほげ</p>
-					<p>TEL：0000-00-0000</p>
+					<p>住所：ニューヨークのあっちの方</p>
+					<p>TEL：0120-XX-XXXX(担当ゆとり)</p>
 				</div>
 			</div>
 			<div class="footer_center">
@@ -249,8 +279,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer_copy">Copyright &copy; 2020 <a href="https://www.daily-trial.com/" target="_blank">デイトラ</a> All rights reserved.</div><!-- /.footer__copy -->
+		<div class="footer_copy">Copyright &copy; 2020 <a href="" target="_blank">Akihiro</a> All rights reserved.</div><!-- /.footer__copy -->
 	</div>
 </footer>
+
+<div class="totop"><a href="#"><img src="img/totop.svg" alt="上部へスクロール"></a></div><!-- /.totop -->
 </body>
 </html>
