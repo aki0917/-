@@ -7,7 +7,7 @@ $color-main: #3f51b5; // ベース色
 $color-active: #e81919; // アクティブ色
 $color-background-base: #fff; // 背景色
 $color-text-base: #333; // テキスト色
-$hover-opacity: 0.6; // 透過度
+$hover-opacity: 0.7; // 透過度
 
 // レイアウト幅
 $layout-width-canvas: 1280px;
@@ -168,9 +168,13 @@ img {
 	max-width: 100%;
 	line-height: 1.6;
 
-	@include mq('sp') {
-		padding: 14px 32px;
-		width: 100%;
+	&:hover {
+		opacity: $hover-opacity;
+
+		@include mq('sp') {
+			padding: 14px 32px;
+			width: 100%;
+		}
 	}
 }
 
@@ -242,6 +246,10 @@ img {
 		a {
 			text-decoration: none;
 			transition: all 0.3s ease 0s;
+
+			&:hover {
+				opacity: $hover-opacity;
+			}
 		}
 	}
 }
@@ -260,27 +268,30 @@ img {
 			margin-right: 40px;
 
 			a{
-				transition: all 0.3s ease 0s;
+				transition: .3s;
 				text-decoration: none;
 				color: $color-background-base;
-				display: block;
+				display: inline-block;
 				position: relative;
 
 				&::after {
 					content: "";
 					position: absolute;
-					left: 0;
-					bottom: -5px;
-					width: 100%;
+					left: 50%;
+					width: 0;
 					height: 2px;
 					background: $color-active;
 					opacity: 0;
-					transition: all 0.3s ease 0s;
+					transition: .3s;
+					-webkit-transform: translateX(-50%);
+					transform: translateX(-50%);
+					bottom: 0;
 				}
 
-				&.is-active {
+				&:hover {
 					&::after {
 						opacity: 1;
+						width: 100%;
 					}
 				}
 			}
@@ -334,12 +345,17 @@ img {
 	text-decoration: none;
 	box-shadow: 0 3px 6px rgba(#000, 0.16);
 	cursor: pointer;
-	transition: all 0.3s ease 0s;
+	transition: all 0.5s ease 0s;
 	padding: 22px 24px;
 	border-radius: 8px;
 	font-size: 24px;
 	width: 384px;
 	max-width: 100%;
+
+	&:hover {
+		-webkit-transform: rotateX(360deg);
+		opacity: $hover-opacity;
+	}
 }
 
 // -----
@@ -398,7 +414,11 @@ img {
 	padding: 16px 16px 14px;
 	display: block;
 	text-decoration: none;
-	transition: all 0.3s ease 0s;
+	transition: .3s;
+
+	&:hover {
+		transform: rotate(5deg);
+	}
 }
 
 .media_img {
@@ -472,11 +492,15 @@ img {
 		text-decoration: none;
 		line-height: 1;
 		transition: all 0.3s ease 0s;
-
+		
+		&:hover {
+			opacity: 0.6;
+		
 		@include mq('sp') {
 			padding: 4px 8px;
 		}
 	}
+}
 
 	&.info_label-type01 {
 		a {
@@ -498,9 +522,26 @@ img {
 	padding: 5px 0 0 20px;
 
 	a {
+		display: inline-block;
 		text-decoration: none;
 		color: $color-text-base;
 		transition: all 0.3s ease 0s;
+
+		&:hover {
+			-webkit-animation: zoom .3s;
+			animation: zoom .3s;
+
+			@-webkit-keyframes zoom {
+				50% {
+					-webkit-transform: scale(1.05);
+				}
+			}
+			@keyframes zoom {
+				50% {
+					transform: scale(1.5);
+				}
+			}
+		}
 	}
 }
 
@@ -514,21 +555,25 @@ img {
 		transition: all 0.3s ease 0s;
 		font-weight: 700;
 
-		&::after {
-			content: "";
-			width: 7px;
-			height: 11px;
-			display: inline-block;
-			margin-left: 10px;
-			vertical-align: middle;
-			margin-top: -1px;
-			background: transparent url(../img/news-arrow.png) no-repeat center center / contain;
+		&:hover {
+			opacity: $hover-opacity;
+
+			&::after {
+				content: "";
+				width: 7px;
+				height: 11px;
+				display: inline-block;
+				margin-left: 10px;
+				vertical-align: middle;
+				margin-top: -1px;
+				background: transparent url(../img/news-arrow.png) no-repeat center center / contain;
+			}
 		}
 	}
 }
 
 // -----
-// ニュース
+// プライス
 // -----
 
 .table {
@@ -538,6 +583,16 @@ img {
 .table_content {
 	margin-top: 80px;
 	display: flex;
+}
+
+.table_attention {
+	a {
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: $hover-opacity;
+		}
+	}
 }
 
 .table_image {
@@ -784,6 +839,10 @@ img {
 		color: $color-text-base;
 		transition: all 0.3s ease 0s;
 		font-weight: 700;
+
+		&:hover {
+			opacity: $hover-opacity;
+		}
 	}
 }
 
@@ -978,6 +1037,10 @@ img {
 	a {
 		transition: all 0.3s ease 0s;
 		text-decoration: none;
+
+		&:hover {
+			opacity: $hover-opacity;
+		}
 	}
 
 	img {
@@ -1036,6 +1099,10 @@ img {
 				color: #fff;
 				text-decoration: none;
 				transition: all 0.3s ease 0s;
+
+				&:hover {
+					opacity: $hover-opacity;
+				}
 			}
 		}
 	}
@@ -1063,6 +1130,10 @@ img {
 			a {
 				text-decoration: none;
 				transition: all 0.3s ease 0s;
+
+				&:hover {
+					opacity: $hover-opacity;
+				}
 			}
 
 			img {
@@ -1114,6 +1185,10 @@ img {
 	a {
 		text-decoration: none;
 		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: $hover-opacity;
+		}
 	}
 
 	img {
@@ -1125,3 +1200,8 @@ img {
 		}
 	}
 }
+
+
+
+
+
