@@ -306,7 +306,7 @@ img {
 .mainvisual {
 	height: 550px;
 	width: 100%;
-	background: transparent url(../img/scott-graham.jpg) no-repeat top center / cover;
+	background: transparent url(../img/mainvisual.png) no-repeat top center / cover;
 	position: relative;
 	overflow: hidden;
 }
@@ -357,6 +357,91 @@ img {
 		opacity: $hover-opacity;
 	}
 }
+
+.swiper-slide {
+	position: relative;
+	height: 600px;
+	width: 100%;
+	background: transparent url(../img/scott-graham.jpg) no-repeat top center / cover;
+
+	@include mq('tab') {
+		height: 600px;
+	}
+
+	@include mq('sp') {
+		height: 500px;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: 40px;
+	height: 40px;
+	transition: all 0.3s ease 0s;
+	margin: -20px 0 0;
+	z-index: 3;
+
+	&:hover {
+		opacity: $hover-opacity;
+	}
+
+	&::after {
+		content: "";
+	}
+}
+
+.swiper-button-prev {
+	background: transparent url(../img/slide-arrow-left.png) no-repeat center center / contain;
+	left: calc(50% - #{$layout-width-inner / 2});
+
+	@include mq('tab') {
+		left: 24px;
+	}
+
+	@include mq('sp') {
+		left: 4px;
+	}
+}
+
+.swiper-button-next {
+	background: transparent url(../img/slide-arrow-right.png) no-repeat center center / contain;
+	right: calc(50% - #{$layout-width-inner / 2});
+
+	@include mq('tab') {
+		right: 24px;
+	}
+
+	@include mq('sp') {
+		right: 4px;
+	}
+}
+
+.swiper-pagination-bullet {
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	opacity: 1;
+
+	@include mq('sp') {
+		width: 8px;
+		height: 8px;
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background: #2f7dc8;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+	bottom: 10px;
+	z-index: 2;
+
+	.swiper-pagination-bullet {
+		margin-left: 6px;
+		margin-right: 6px;
+	}
+}
+
 
 // -----
 // カード

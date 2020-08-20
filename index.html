@@ -7,6 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>ブラックカンパニー</title>
 	<meta name="description" content="">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
@@ -25,20 +27,76 @@
 		</div>
 	</header>
 
- <div class="mainvisual">
-	 <div class="mainvisual_content">
-		 <div class="mainvisual_title">ブラックカンパニー<br class="hidden-tab hidden-pc">へようこそ</div>
-		 <div class="mainvisual_lead">今月はノルマ倍だ！！！！</ri-do></div>
-		 <div class="mainvisual_lead">(※これは練習サイトです)</ri-do></div>
-		 <div class="mainvisual_button"><a class="button-mainvisual" href="">お問い合わせ</a></div>
-	 </div>
- </div>
+	<div class="mainvisual">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="mainvisual_content">
+						<div class="mainvisual_title">ブラックカンパニー<br class="hidden-tab hidden-pc"></div><!-- /.mainvisual__title -->
+						<div class="mainvisual_lead"></div><!-- /.mainvisual__lead -->
+						<div class="mainvisual_button"><a class="button-mainvisual" href="">お問い合わせ</a></div><!-- /.mainvisual__button -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
+					</div><!-- /.mainvisual__content -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="mainvisual_content">
+						<div class="mainvisual_title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く2</div><!-- /.mainvisual__title -->
+						<div class="mainvisual_lead">リードリードリード2</div><!-- /.mainvisual__lead -->
+						<div class="mainvisual_button"><a class="button-mainvisual" href="">お問い合わせ2</a></div><!-- /.mainvisual__button -->
+					</div><!-- /.mainvisual__content -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="mainvisual_content">
+						<div class="mainvisual_title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く3</div><!-- /.mainvisual__title -->
+						<div class="mainvisual_lead">リードリードリード3</div><!-- /.mainvisual__lead -->
+						<div class="mainvisual_button"><a class="button-mainvisual" href="">お問い合わせ3</a></div><!-- /.mainvisual__button -->
+					</div><!-- /.mainvisual__content -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="mainvisual_content">
+						<div class="mainvisual_title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く4</div><!-- /.mainvisual__title -->
+						<div class="mainvisual_lead">リードリードリード4</div><!-- /.mainvisual__lead -->
+						<div class="mainvisual_button"><a class="button-mainvisual" href="">お問い合わせ4</a></div><!-- /.mainvisual__button -->
+					</div><!-- /.mainvisual__content -->
+				</div><!-- /.swiper-slide -->
+				<div class="swiper-slide">
+					<div class="mainvisual_content">
+						<div class="mainvisual_title">一番伝えたい<br class="hidden-tab hidden-pc">ことを書く5</div><!-- /.mainvisual__title -->
+						<div class="mainvisual_lead">リードリードリード5</div><!-- /.mainvisual__lead -->
+						<div class="mainvisual_button"><a class="button-mainvisual" href="">お問い合わせ5</a></div><!-- /.mainvisual__button -->
+					</div><!-- /.mainvisual__content -->
+				</div><!-- /.swiper-slide -->
+			</div><!-- /.swiper-wrapper -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-pagination"></div>
+		</div><!-- /.swiper-container -->
+	</div><!-- /.mainvisual -->
 
+	<script src="./js/swiper.min.js"></script> 
+	<script>
+		// スライダー
+		var mySwiper = new Swiper('.swiper-container', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			}
+		});
+	</script>
+	
  <section id="" class="card section">
 	<div class="card_inner inner">
-		<h2 class="section-title">Employee</h2>
+		<h2 class="section-title  wow fadeInUp">Employee</h2>
 		<div class="card_items">
-			<div class="card_item">
+			<div class="card_item wow fadeInUp">
 				<a class="media" href="">
 					<div class="media_img"><img src="img/yutori.jpg" alt=""></div>
 					<div class="media_body">
@@ -47,7 +105,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="card_item">
+			<div class="card_item wow fadeInUp">
 				<a class="media" href="">
 					<div class="media_img"><img src="img/white.jpg" alt=""></div>
 					<div class="media_body">
@@ -56,7 +114,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="card_item">
+			<div class="card_item wow fadeInUp">
 				<a class="media" href="">
 					<div class="media_img"><img src="img/tengu.jpg" alt=""></div>
 					<div class="media_body">
@@ -65,7 +123,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="card_item">
+			<div class="card_item wow fadeInUp">
 				<a class="media" href="">
 					<div class="media_img"><img src="img/black.jpg" alt=""></div>
 					<div class="media_body">
@@ -74,7 +132,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="card_item">
+			<div class="card_item wow fadeInUp">
 				<a class="media" href="">
 					<div class="media_img"><img src="img/yutori.jpg" alt=""></div>
 					<div class="media_body">
@@ -83,7 +141,7 @@
 					</div>
 				</a>
 			</div>
-			<div class="card_item">
+			<div class="card_item wow fadeInUp">
 				<a class="media" href="">
 					<div class="media_img"><img src="img/yutori.jpg" alt=""></div>
 					<div class="media_body">
@@ -285,5 +343,10 @@
 </footer>
 
 <div class="totop"><a href="#"><img src="img/totop.svg" alt="上部へスクロール"></a></div><!-- /.totop -->
+
+<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 </body>
 </html>
