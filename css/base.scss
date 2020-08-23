@@ -226,6 +226,10 @@ img {
 	width: 100%;
 	z-index: 20;
 	height: 100px;
+
+	@include mq ('sp') {
+		height: $header-height-sp;
+	}
 }
 
 .header_inner {
@@ -233,6 +237,11 @@ img {
 	align-items: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
+
+	@include mq('sp') {
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
 }
 
 .header_logo {
@@ -243,19 +252,31 @@ img {
 		width: 205px;
 		vertical-align: top;
 
-		a {
-			text-decoration: none;
-			transition: all 0.3s ease 0s;
+		@include mq('tab') {
+			width: 180px;
+		}
 
-			&:hover {
-				opacity: $hover-opacity;
-			}
+		@include mq('sp') {
+			width: 148px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: $hover-opacity;
 		}
 	}
 }
 
 .header_nav {
 	margin-left: auto;
+
+	@include mq('sp') {
+		display: none;
+	}
 
 	ul {
 		list-style: none;
@@ -309,6 +330,14 @@ img {
 	background: transparent url(../img/mainvisual.png) no-repeat top center / cover;
 	position: relative;
 	overflow: hidden;
+
+	@include mq('tab') {
+		height: 600px;
+	}
+
+	@include mq('sp') {
+		height: 500px;
+	}
 }
 
 .mainvisual_content {
@@ -319,21 +348,55 @@ img {
 	width: 100%;
 	text-align: center;
 	line-height: 1.2;
+
+	@include mq ('tab') {
+		padding-left: $padding-tab;
+		padding-right: $padding-tab;
+	}
+
+	@include mq('sp') {
+		padding-left: $padding-sp;
+		scroll-padding-right: $padding-sp;
+	}
 }
 
 .mainvisual_title {
 	font-size: 64px;
 	font-weight: 700;
+
+	@include mq('tab') {
+		font-size: 56px;
+	}
+
+	@include mq('sp') {
+		font-size: 36px;
+	}
 }
 
 .mainvisual_lead {
 	font-size: 24px;
 	font-weight: 700;
 	margin-top: 24px;
+
+	@include mq('tab') {
+		font-size: 30px;
+	}
+
+	@include mq('sp') {
+		font-size: 20px;
+	}
 }
 
 .mainvisual_button {
 	margin-top: 36px;
+
+	@include mq('tab') {
+		margin-top: 34px;
+	}
+
+	@include mq('sp') {
+		margin-top: 34px;
+	}
 }
 
 .button-mainvisual {
@@ -352,11 +415,21 @@ img {
 	width: 384px;
 	max-width: 100%;
 
+	@include mq('sp') {
+		padding: 20px 36px;
+		font-size: 20px;
+		width: 280px;
+	}
+
 	&:hover {
 		-webkit-transform: rotateX(360deg);
 		opacity: $hover-opacity;
 	}
 }
+
+// -----
+// スライダー
+// -----
 
 .swiper-slide {
 	position: relative;
@@ -458,6 +531,10 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 56px;
+
+	@include mq('sp') {
+		margin-top: 30px;
+	}
 }
 
 .card_item {
@@ -512,6 +589,10 @@ img {
 
 .media_body {
 	margin-top: 12px;
+
+	img {
+		vertical-align: bottom;
+	}
 }
 
 .media_title {
@@ -531,31 +612,56 @@ img {
 // ニュース
 // -----
 
+.news {
+}
+
 .news_items {
 	margin: 60px auto 0;
 	width: 800px;
 	max-width: 100%;
+
+	@include mq('sp') {
+		margin-top: 38px;
+	}
 }
 
 .news_item {
 	border-bottom: 1px solid #707070;
+
+	&:last-child {
+		border: none;
+	}
 }
 
 .info {
 	padding: 20px 0 10px;
 	display: flex;
+
+	@include mq('sp') {
+		display: block;
+		padding: 12px 0;
+	}
 }
 
 .info_meta {
 	display: flex;
 	width: 185px;
 	padding-top: 2px;
+
+	@include mq ('sp') {
+		width: 100%;
+		padding-top: 0;
+	}
 }
 
 .info_published {
 	width: 105px;
 	display: inline-block;
 	padding-top: 3px;
+
+	@include mq ('sp') {
+		width: auto;
+	}
 }
 
 .info_label {
@@ -605,6 +711,12 @@ img {
 	line-height: 1.25;
 	width: calc(100% - 105px - 80px);
 	padding: 5px 0 0 20px;
+
+	@include mq('sp') {
+		width: 100%;
+		margin-top: 6px;
+		padding: 0;
+	}
 
 	a {
 		display: inline-block;
@@ -668,10 +780,20 @@ img {
 .table_content {
 	margin-top: 80px;
 	display: flex;
+
+	@include mq('sp') {
+		display: block;
+		margin-top: 52px;
+	}
 }
 
 .table_attention {
+	margin-top: 6px;
+	font-size: 14px;
+
 	a {
+		font-weight: 700;
+		color: $color-text-base;
 		transition: all 0.3s ease 0s;
 
 		&:hover {
@@ -684,10 +806,24 @@ img {
 	width: 454px;
 	margin-right: 40px;
 	text-align: center;
+
+	@include mq('tab') {
+		margin-right: 62px;
+	}
+
+	@include mq('sp') {
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 32px;
+	}
 }
 
 .table_price {
 	width: 704px;
+
+	@include mq('sp') {
+		width: 100%;
+	}
 }
 
 .table-default {
@@ -828,6 +964,11 @@ img {
 	background: #fff;
 	width: 800px;
 	max-width: 100%;
+
+	@include mq('sp') {
+		padding: 20px;
+		margin-top: 26px;
+	}
 }
 
 .contact_controls {
