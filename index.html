@@ -276,7 +276,40 @@
 		</dl>
 		<div class="map_link"><a class="button-arrow-right" href="https://goo.gl/maps/uDeoDtF2TqyJJUcV8" target="_blank">Googleマップで見る</a></div>
 	</div>
+</section>		
+
+<section class="qa section">
+	<div class="qa_inner inner">
+		<h2 class="section-title">Q &amp; A</h2><!-- /.section-title -->
+		<dl class="qa_items">
+			<div class="qa_item accordion">
+				<dt class="accordion_head">残業はありますか？<span class="accordion_icon"></span></dt>
+				<dd class="accordion_body">
+					<div class="accordion_body-in">あります。タイムカード切ってから残業してください</div>
+				</dd>
+			</div>
+			<div class="qa_item accordion">
+				<dt class="accordion_head">会社の雰囲気を教えてください!<span class="accordion_icon"></span></dt>
+				<dd class="accordion_body">
+					<div class="accordion_body-in">とてもアットホームな職場ですよ(^_−)−☆</div>
+				</dd>
+			</div>
+			<div class="qa_item accordion">
+				<dt class="accordion_head">クリックするとどうなりますか？<span class="accordion_icon"></span></dt>
+				<dd class="accordion_body">
+					<div class="accordion_body-in">10億円当たります</div>
+				</dd>
+			</div>
+			<div class="qa_item accordion">
+				<dt class="accordion_head">社訓はありますか？<span class="accordion_icon"></span></dt>
+				<dd class="accordion_body">
+					<div class="accordion_body-in">1にお客で2に会社!3,4飛ばして5に社員!</div>
+				</dd>
+			</div>
+		</dl>
+	</div>
 </section>
+
 
 <section id="" class="contact section">
 	<div class="contact_inner inner">
@@ -372,7 +405,6 @@
 
 <div class="totop"><a href="#"><img src="img/totop.svg" alt="上部へスクロール"></a></div><!-- /.totop -->
 
-
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
 	jQuery(function() {
@@ -407,8 +439,25 @@
 				jQuery('.totop').removeClass('is-show');
 			}
 		});
+
+		// クリック（メニュー）
+		jQuery('.header_nav ul li a').click(function() {
+			jQuery('.header_nav ul li a').removeClass('is-active');
+			jQuery(this).addClass('is-active');
+			return false;
+		});
+	
+		// アコーディオン
+		jQuery('.accordion_head').click(function() {
+				jQuery(this).next().slideToggle();
+				jQuery(this).children('.accordion_icon').toggleClass('is-open');
+		});
 	});
+
+	
 </script>
+
+
 
 <script src="js/wow.min.js"></script>
 	<script>
